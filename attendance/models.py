@@ -14,6 +14,6 @@ class Attendance(models.Model):
     pm_in = models.TimeField(null=True)
     pm_in_mask = models.CharField(max_length=255, null=True)
     pm_out = models.TimeField(null=True)
-    pm_out_mask = models.CharField(max_length=255, null=True
+    pm_out_mask = models.CharField(max_length=255, null=True)
 
     objects = models.Manager()
