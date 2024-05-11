@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 class BaseModel(models.Model):
-  created_at = models.DateTimeField(default=timezone.now
+  created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(default=timezone.now)
 
   class Meta:
@@ -11,6 +11,7 @@ class BaseModel(models.Model):
 class Department(BaseModel):
   departmentId = models.AutoField(primary_key=True)
   departmentName = models.CharField(max_length=255)
+
 
 class Employee(BaseModel):
   employee_id = models.AutoField(primary_key=True)
@@ -25,6 +26,7 @@ class Employee(BaseModel):
   position = models.CharField(max_length=100)
   hire_date = models.DateField()
 
+
 class SalaryDetail(BaseModel):
   salary_detail_id = models.AutoField(primary_key=True)
   employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
@@ -35,12 +37,14 @@ class SalaryDetail(BaseModel):
   pay_period_start = models.DateField()
   pay_period_end = models.DateField()
 
+
 class TaxDetail(BaseModel):
   tax_detail_id = models.AutoField(primary_key=True)
   employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
   tax_type = models.CharField(max_length=100)
   tax_rate = models.DecimalField(max_digits=5, decimal_places=2)
   taxable_income = models.DecimalField(max_digits=10, decimal_places=2)
+
 
 class Benefit(BaseModel):
   benefit_id = models.AutoField(primary_key=True)
@@ -54,6 +58,7 @@ class Attendance(BaseModel):
   attendance_date = models.DateField()
   check_in_time = models.DateTimeField()
   check_out_time = models.DateTimeField()
+
 
 class PayrollHistory(BaseModel):
   payroll_history_id = models.AutoField(primary_key=True)
