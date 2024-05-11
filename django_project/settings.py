@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4ju2n@$f9d0c=h)_g0lbb%k9&@rf(xa$d$g$&5ri$uf)*gev^4
 DEBUG = True
 
 ALLOWED_HOSTS = [".replit.dev", ".replit.app"]
-CSRF_TRUSTED_ORIGINS = ["https://*.replit.dev", "https://*.replit.app"]
+CSRF_TRUSTED_ORIGINS = ["https://*.replit.dev", "https://*.replit.app", "https://2ed0068d-5157-42b0-a697-00aa7bfac487-00-2cbtckxewl1f6.janeway.replit.dev:8000"]
 
 # Application definition
 
@@ -38,10 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'payroll',
     'announcements',
     'attendance',
-    'rest_framework'
+    'rest_framework',
+    'wagtail',
+    'payroll_info',
+    'employee',
+    'department'
 ]
 
 MIDDLEWARE = [

@@ -54,4 +54,16 @@ def save_attendance(request):
   else:
     return HttpResponseNotAllowed(['POST', 'GET'])
 
+@csrf_exempt
+def view_attendance(request):
+  if request.method == 'GET':
+    attendance_list = Attendance.objects.all()
+    result = {
+      'status': 'success',
+      'message': 'Attendance list retrieved.',
+      'attendance_list': attendance_list
+    }
+    return JsonResponse(result, status=200)
+  else:
+    return HttpResponseNotAllowed(['GET'])
 
