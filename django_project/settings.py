@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'wagtail',
     'payroll_info',
     'employee',
-    'department'
+    'department',
+    'benefit'
 ]
 
 MIDDLEWARE = [

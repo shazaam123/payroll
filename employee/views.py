@@ -70,16 +70,16 @@ def post_employee(request):
 @csrf_exempt
 def put_employee(request):
   if request.method == 'PUT':
-    first_name = request.POST.get('first_name')
-    last_name = request.POST.get('last_name')
-    date_of_birth = request.POST.get('date_of_birth')
-    gender = request.POST.get('gender')
-    address = request.POST.get('address')
-    email = request.POST.get('email')
-    phone = request.POST.get('phone')
-    department = request.POST.get('department')
-    position = request.POST.get('position')
-    hire_date = request.POST.get('hire_date')
+    first_name = request.PUT.get('first_name')
+    last_name = request.PUT.get('last_name')
+    date_of_birth = request.PUT.get('date_of_birth')
+    gender = request.PUT.get('gender')
+    address = request.PUT.get('address')
+    email = request.PUT.get('email')
+    phone = request.PUT.get('phone')
+    department = request.PUT.get('department')
+    position = request.PUT.get('position')
+    hire_date = request.PUT.get('hire_date')
 
     employee = Employee(
       first_name=first_name,
