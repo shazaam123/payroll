@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from employee.models import Employee
+
 class BaseModel(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
@@ -22,4 +23,5 @@ class Attendance(BaseModel):
     pm_out = models.TimeField(null=True)
     pm_out_mask = models.CharField(max_length=255, null=True)
 
-    objects = models.Manager()
+    def __str__(self):
+        return f"Attendance for {self.employee} on {self.date_log}"
