@@ -47,8 +47,39 @@ INSTALLED_APPS = [
     'employee',
     'department',
     'benefit',
-    'django_api_admin'
+    'django_api_admin',
+    'djangocms_admin_style'
 ]
+
+LANGUAGES = [
+    ("en", "English"),
+    ("fr", "French"),
+    ("de", "German"),
+    ("it", "Italian"),
+    ("es", "Spanish"),
+    ("pt", "Portuguese"),
+    ("nl", "Dutch"),
+    ("pl", "Polish"),
+    ("ru", "Russian"),
+    ("zh", "Chinese"),
+    ("ja", "Japanese"),
+    ("ko", "Korean"),
+    ("ar", "Arabic"),
+    ("hi", "Hindi"),
+    ("th", "Thai"),
+    ("vi", "Vietnamese"),
+    ("id", "Indonesian"),
+    ("hi", "Hindi"),
+    ("ur", "Urdu"),
+    ("ta", "Tamil"),
+    ("te", "Telugu"),
+    ("bn", "Bengali"),
+    ("ml", "Malayalam"),
+    ("kn", "Kannada"),
+    ("or", "Oriya")
+]
+
+LANGUAGE_CODE = "en"
 
 CORS_ALLOWED_ORIGINS = ['https://2ed0068d-5157-42b0-a697-00aa7bfac487-00-2cbtckxewl1f6.janeway.replit.dev:5173/']
 
