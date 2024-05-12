@@ -21,3 +21,5 @@ class Employee(BaseModel):
   department = models.ForeignKey(Department, on_delete=models.CASCADE)
   position = models.CharField(max_length=100)
   hire_date = models.DateField()
+
+  objects = models.Manager()

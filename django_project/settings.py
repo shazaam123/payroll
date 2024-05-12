@@ -31,6 +31,7 @@ CSRF_TRUSTED_ORIGINS = ["https://*.replit.dev", "https://*.replit.app", "https:/
 # Application definition
 
 INSTALLED_APPS = [
+    'adminsortable',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,8 +46,11 @@ INSTALLED_APPS = [
     'payroll_info',
     'employee',
     'department',
-    'benefit'
+    'benefit',
+    'django_api_admin'
 ]
+
+CORS_ALLOWED_ORIGINS = ['https://2ed0068d-5157-42b0-a697-00aa7bfac487-00-2cbtckxewl1f6.janeway.replit.dev:5173/']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,6 +62,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissionAnonReadOnly',
+    ]
+}
+
 ROOT_URLCONF = 'django_project.urls'
 
 TEMPLATES = [
@@ -67,6 +77,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.static',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
