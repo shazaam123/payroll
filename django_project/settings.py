@@ -48,9 +48,8 @@ INSTALLED_APPS = [
     'department',
     'benefit',
     'django_api_admin',
-    'djangocms_admin_style'
+    'users'
 ]
-
 LANGUAGES = [
     ("en", "English"),
     ("fr", "French"),
@@ -78,8 +77,6 @@ LANGUAGES = [
     ("kn", "Kannada"),
     ("or", "Oriya")
 ]
-
-LANGUAGE_CODE = "en"
 
 CORS_ALLOWED_ORIGINS = ['https://2ed0068d-5157-42b0-a697-00aa7bfac487-00-2cbtckxewl1f6.janeway.replit.dev:5173/']
 
